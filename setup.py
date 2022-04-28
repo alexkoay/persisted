@@ -7,7 +7,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="persisted",
-    version="1.0.0b1",
+    version="1.0.0b2",
     description="A two-way data persistence framework for watching file changes / updating files based on changes",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -28,8 +28,8 @@ setup(
         "Topic :: Utilities",
     ],
     keywords="persistence watch reload save",
-    package_dir={"": "persisted"},
-    packages=find_packages(where="persisted"),
+    packages=["persisted"],
+    package_dir={"persisted": "persisted"},
     python_requires=">=3.7, <4",
     extras_require={
         "dev": ["black", "mypy", "isort"],
